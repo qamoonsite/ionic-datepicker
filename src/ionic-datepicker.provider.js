@@ -186,7 +186,7 @@ angular.module('ionic-datepicker.provider', [])
       //Setting up the initial object
       function setInitialObj(ipObj) {
         $scope.mainObj = angular.copy(ipObj);
-        $scope.selctedDateEpoch = resetHMSM($scope.mainObj.inputDate).getTime();
+        $scope.selctedDateEpoch = moment().format("MMM DD, YYYY");//resetHMSM($scope.mainObj.inputDate).getTime();
 
         if ($scope.mainObj.weeksList && $scope.mainObj.weeksList.length === 7) {
           $scope.weeksList = $scope.mainObj.weeksList;
